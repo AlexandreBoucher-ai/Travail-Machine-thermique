@@ -79,3 +79,15 @@ PME = wnet / (v1 - v2) # Réponse
 
 # 12. rendement
 n = wnet / qin # Réponse
+
+# Question 3: Consommation de carburant
+
+# 1. L nécessaire par cycle (Conso per cycle = cpc)
+Pcal = 38220000 # J/L
+cpc = wnet / Pcal
+
+# 2. Nb de cycle par heure (nph)
+nph = 3600 * (200 / 60)
+
+# 3. Consommation par heure (cph)
+cph = cpc * nph # Réponse
