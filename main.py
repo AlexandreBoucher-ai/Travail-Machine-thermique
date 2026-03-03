@@ -181,17 +181,29 @@ liste_PME = [903594.5516141937, 967150.2480030286, 1027382.2421808725,
 liste_P = [100978.3370897807, 108080.80193140994, 114811.83699665553,
            121237.31735869375, 127408.5713990397, 133366.299508368]
 
-plt.cla()
-plt.figure()
+plt.clf()
 
-plt.subplot(6, 6, 1)
 plt.plot(liste_r, liste_tmax)
-plt.title('Tmax en fonction de r')
+plt.title('Température maximal en fonction du taux de compression')
 plt.xlabel('r')
-plt.ylabel('Tmax')
+plt.ylabel('Tmax [K]')
 
-plt.subplot(6, 6, 2)
 plt.plot(liste_r, liste_pmax)
-plt.title('Pmax en fonction de r')
+plt.title('Pression maximale en fonction du taux de compression')
 plt.xlabel('r')
-plt.ylabel('Pmax')
+plt.ylabel('Pmax [Pa]')
+
+plt.plot(liste_r, liste_n)
+plt.title('Rendement thermique en fonction du taux de compression')
+plt.xlabel('r')
+plt.ylabel('Rendement')
+
+plt.plot(liste_r, liste_PME)
+plt.title('Pression effective moyenne en fonction du taux de compression')
+plt.xlabel('r')
+plt.ylabel('PME [Pa]')
+
+plt.plot(liste_r, liste_P)
+plt.title('Puissance produite en fonction du taux de compression')
+plt.xlabel('r')
+plt.ylabel('P [HP]')
